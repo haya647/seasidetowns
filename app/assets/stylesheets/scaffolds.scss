@@ -1,0 +1,214 @@
+body {
+  background-color: #EEEEEE;
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+
+  &:visited {
+    color: #666;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+th {
+  padding-bottom: 5px;
+}
+
+td {
+  padding: 0 5px 7px;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px -7px 0;
+    background-color: #c00;
+    color: #fff;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+label {
+  display: block;
+}
+
+img{
+   max-width: 300px;
+   height: auto;
+}
+table{
+  display: inline;
+}
+
+.menu{
+  display: inline;
+  height: 25%;
+  width: 25%;
+  &:hover  {
+    opacity: 0.5;
+      box-shadow: inset 0 2px 0 rgba(255,255,255,0.2);
+    }
+}
+
+
+span{
+    opacity: 0.7;
+    font-size: 20px;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: gray;
+    border-left: solid 6px white;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+}
+
+h1 {
+  text-align: center;
+  padding: 40px 5px 5px 30px;
+  margin-bottom: 50px;
+  font-size: 50px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #6182ca, 0px 2px 0px #4f6aa7, 0px 3px 0px #5470ad;
+
+}
+h2 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 220px;
+  padding: 5px 5px 5px 30px;
+  font-size: 20px;
+    color: white;
+  color: #fff;
+}
+
+
+#bg{
+  /* 画像ファイルの指定 */
+   background-image: url("sunset.jpg");
+   height: 100%;
+   width: 100%;
+   top:0%;
+   left:0%;
+   right: 0%;
+   bottom: 0%;
+   position: fixed;
+   /* 画像を常に天地左右の中央に配置 */
+   background-position: center center;
+   /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+   background-size: cover;
+}
+
+.btn02{
+  font-size: 15px;
+    display: inline-block;
+    padding: 0.25em 0.25em;
+    text-decoration: none;
+    background:  #EEEEEE;
+    color: #4868ad;/*ボタン色より暗く*/
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3px #627295;
+    border-radius: 3px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.btn02:active   {
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+}
+
+a {
+	text-decoration: none ;
+  &:hover  {
+    opacity: 0.5;
+      box-shadow: inset 20 40px 0 rgba(255,255,255,0.2);
+    }
+}
+
+.btn {
+   font-size: 20px;
+    position: relative;
+    display: inline-block;
+    padding: 0.5em 0.5em;
+    margin-right: 20px;
+    text-decoration: none;
+    background: white;/*背景色*/
+    color: #00BCD4;/*=背景色*/
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.2);
+    border-bottom: solid 2px #118e9e;
+    border-radius: 4px;
+    font-weight: bold;
+    text-shadow: -1px -1px rgba(255, 255, 255, 0.44), 1px 1px rgba(0, 0, 0, 0.38);
+}
+
+.btn:active {/*押したとき*/
+   border-bottom: solid 2px #00BCD4;
+   box-shadow: none;
+   text-shadow: -1px -1px rgba(255, 255, 255, 0.3), 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+
+.title{
+      padding: 10px 5px;
+      font-style: oblique;
+      font-size: 25px;
+      font-weight: bold;
+      text-decoration: none;
+}

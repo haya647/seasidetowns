@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @topic04.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @topic04.body %>
+</p>
+
+<p>
+ <strong>Picture:</strong>
+  <%= image_tag(@topic04.picture_url) if @topic04.picture.present? %>
+</p>
+<%= link_to 'Edit', edit_topic04_path(@topic04) ,class: 'btn02'%> |
+<%= link_to 'Back', topic04s_path ,class: 'btn02'%>

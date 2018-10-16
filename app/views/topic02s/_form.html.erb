@@ -1,0 +1,36 @@
+<%= form_with(model: topic02, local: true) do |form| %>
+  <% if topic02.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(topic02.errors.count, "error") %> prohibited this topic02 from being saved:</h2>
+
+      <ul>
+      <% topic02.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+
+  <div class="field">
+    <%= form.label :picture %>
+    <%= form.file_field :picture %>
+  </div>
+
+  <p>
+    <%= image_tag(@topic02.picture_url) if @topic02.picture.present? %>
+  </p>
+
+   <div class="actions">
+     <%= form.submit %>
+   </div>
+<% end %>

@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Chiba North area</h1>
+
+<table>
+  <thead>
+
+    <tr>
+
+      <p><%= link_to 'NEW CREATE', new_topic02_path ,class: 'btn'%>
+      <%= link_to 'TOP', '/' ,class: 'btn'%></p>
+
+
+    </tr>
+  </thead>
+
+  <tbody >
+    <% @topic02s.each do |topic02| %>
+    <table >
+      <tr><td>ID:<%= topic02.id %></td></tr>
+      <tr><td class="title"><%= link_to topic02.title, topic02 %></td></tr>
+      <tr><td><%= image_tag topic02.picture.to_s if topic02.picture.present?%></td></tr>
+      <tr><td><%= topic02.body %></td></tr>
+      <tr><td><%= topic02.updated_at %></td></tr>  　
+      <tr><td><%= link_to 'Show', topic02 ,class: 'btn02'%>
+        <%= link_to 'Edit', edit_topic02_path(topic02) ,class: 'btn02'%>
+        <%= link_to 'Destroy', topic02, method: :delete, data: { confirm: 'Are you sure?' } ,class: 'btn02'%>
+      </td></tr>
+    </table>
+    <% end %>
+
+    <table >
+      <tr><td></td></tr>
+      <tr><td class="title"><%= link_to "surfpoint","https://surfhogehoge.herokuapp.com/pointsave/new"%></td></tr>
+      <tr><td><%= image_tag('sf.jpeg') %></td></tr>
+      <tr><td></td></tr>
+      <tr><td></td></tr>     　
+      <tr><td><%= link_to 'Show',  "https://surfhogehoge.herokuapp.com/pointsave/new" ,class: 'btn02'%>
+      </td></tr>
+    </table>
+
+
+  </tbody>
+
+
+  <br>

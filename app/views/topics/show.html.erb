@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @topic.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @topic.body %>
+</p>
+
+<p>
+ <strong>Picture:</strong>
+  <%= image_tag(@topic.picture_url) if @topic.picture.present? %>
+</p>
+
+
+<%#<% @comment.each do |comment| %>
+<%#<li>comment.body</li>
+<% end %>
+
+    <%#<%= form_for ("/comments") do |f| %>
+    <%#<%= f.hidden_field :topic_id, :value =>  params[:id]%>
+    <%#<%= f.text_field :body %>
+    <%#<%= f.submit "コメント" %>
+    <%#<%end%>
+
+
+<%= link_to 'Edit', edit_topic_path(@topic) ,class: 'btn02'%> |
+<%= link_to 'Back', topics_path ,class: 'btn02'%>
