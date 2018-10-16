@@ -138,13 +138,11 @@ h2 {
 
 #bg{
   /* 画像ファイルの指定 */
-   background-image: url("sunset.jpg");
+   background-image: url("images.jpeg");
    height: 100%;
    width: 100%;
    top:0%;
    left:0%;
-   right: 0%;
-   bottom: 0%;
    position: fixed;
    /* 画像を常に天地左右の中央に配置 */
    background-position: center center;
