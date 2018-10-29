@@ -14,5 +14,32 @@
  <strong>Picture:</strong>
   <%= image_tag(@topic03.picture_url) if @topic03.picture.present? %>
 </p>
+
+<% @topic03.comment03s.each do |comment| %>
+  <table>
+  <tr><td>
+　<%= image_tag(comment.picture_url) if comment.picture.present? %>
+  </td></tr>
+  <tr><td>
+    <%= comment.body%>
+  </td></tr>
+  <tr><td>
+    <%= link_to '削除', comment, method: :delete, data: { confirm: 'Are you sure?' } ,class: 'btn02'%>
+　 </td></tr>
+   </table>
+　 <% end %>
+
+  <br><br><br>
+  <p> <strong>コメント</strong></p>
+  <%= form_for @comment do |f| %>
+  <%= f.hidden_field :topic03_id, :value =>  params[:id]%>
+  <P><%= f.text_field :body %>
+  <%= f.file_field :picture %>
+  <%= f.submit "投稿" ,class: 'btn02'%></p>
+  <%end%>
+  <br>
+
+
+
 <%= link_to 'Edit', edit_topic03_path(@topic03) ,class: 'btn02'%> |
 <%= link_to 'Back', topic03s_path ,class: 'btn02'%>

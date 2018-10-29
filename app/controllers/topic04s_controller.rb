@@ -10,6 +10,7 @@ class Topic04sController < ApplicationController
   # GET /topic04s/1
   # GET /topic04s/1.json
   def show
+    @comment = Comment04.new
   end
 
   # GET /topic04s/new
@@ -28,7 +29,7 @@ class Topic04sController < ApplicationController
 
     respond_to do |format|
       if @topic04.save
-        format.html { redirect_to @topic04, notice: 'Topic04 was successfully created.' }
+        format.html { redirect_to @topic04, notice: 'Topic was successfully created.' }
         format.json { render :show, status: :created, location: @topic04 }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class Topic04sController < ApplicationController
   def update
     respond_to do |format|
       if @topic04.update(topic04_params)
-        format.html { redirect_to @topic04, notice: 'Topic04 was successfully updated.' }
+        format.html { redirect_to @topic04, notice: 'Topic was successfully updated.' }
         format.json { render :show, status: :ok, location: @topic04 }
       else
         format.html { render :edit }
@@ -56,7 +57,7 @@ class Topic04sController < ApplicationController
   def destroy
     @topic04.destroy
     respond_to do |format|
-      format.html { redirect_to topic04s_url, notice: 'Topic04 was successfully destroyed.' }
+      format.html { redirect_to topic04s_url, notice: 'Topic was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
