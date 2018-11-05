@@ -2,7 +2,7 @@
 
 <p>
   <strong>Title:</strong>
-  <%= @topic02.title %>
+    <p class="title"><%= @topic02.title %></p>
 </p>
 
 <p>
@@ -30,10 +30,10 @@
 　 <% end %>
 
   <br><br><br>
-  <p> <strong>コメント</strong></p>
+  <p > <strong>コメント</strong></p>
   <%= form_for @comment do |f| %>
   <%= f.hidden_field :topic02_id, :value =>  params[:id]%>
-  <P><%= f.text_field :body %>
+  <P class="comment"><%= f.text_field :body %>
   <%= f.file_field :picture %>
   <%= f.submit "投稿" ,class: 'btn02'%></p>
   <%end%>
