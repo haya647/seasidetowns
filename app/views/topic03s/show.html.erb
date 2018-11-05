@@ -34,7 +34,7 @@
   <%= form_for @comment do |f| %>
   <%= f.hidden_field :topic03_id, :value =>  params[:id]%>
   <P class="comment"><%= f.text_field :body %>
-  <%= f.file_field :picture %>
+  <%#<%= f.file_field :picture %>
   <%= f.submit "投稿" ,class: 'btn02'%></p>
   <%end%>
   <br>
